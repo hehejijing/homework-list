@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <MyHeader title="我爱一条柴"></MyHeader>
+    <div style="margin-top: 45px">
+      <!-- <component :is="comName"></component> -->
+    </div>
+    <MyTabBar ></MyTabBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyHeader from "./components/MyHeader.vue";
+import MyTabBar from "./components/MyTabBar.vue";
+
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      comName: "MyGoodsList",
+     
+    };
+  },
+  methods: {
+
+  },
+  
   components: {
-    HelloWorld
-  }
-}
+    MyHeader,
+    MyTabBar,
+
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
